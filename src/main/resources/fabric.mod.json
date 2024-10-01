@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "nocraftingtable",
+  "version": "${version}",
+
+  "name": "NoCraftingTable",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "All-Rights-Reserved",
+  "icon": "assets/nocraftingtable/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.joshiy13.nocraftingtable.client.NocraftingtableClient"],
+    "main": ["dev.joshiy13.nocraftingtable.Nocraftingtable"]
+  },
+
+  "mixins": [
+    "nocraftingtable.mixins.json"
+    ,{
+      "config": "nocraftingtable.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
