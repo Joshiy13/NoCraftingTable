@@ -11,7 +11,7 @@ public class NocraftingtableClient implements ClientModInitializer {
     public void onInitializeClient() {
         UseBlockCallback.EVENT.register((player, world, hand, hitResult) -> {
             if (world.getBlockState(hitResult.getBlockPos()).getBlock() == Blocks.CRAFTING_TABLE) {
-                return ActionResult.FAIL; // Prevents the crafting table from being used
+                return ActionResult.FAIL;
             }
             return ActionResult.PASS;
         });
